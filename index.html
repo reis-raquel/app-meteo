@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="index.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+   
+    <div class="box-app"> 
+    <header>
+      <form id="city-search">
+        <input
+          type="search"
+          placeholder="Enter a city.."
+          required
+          class="search-input"
+          id="search-input"
+        />
+
+        <input type="submit" value="search" class="search-button" />
+      </form>
+    </header>
+
+    <main>
+        
+            <h1 Class="current-city"> Lisboa</h1>
+            <div class="temperature-icon"> 🌧️</div>
+            <p> <div class="current-temperature-value"> 23 </div> </p>
+            
+            <div class="current-date"> Monday , 15 janeiro, 2024  </div> <span class="current-hour">  17h00</span>  
+                       
+            
+            <div class="weather-details"> Humidity: 87%, Wind: 7.2km/h </div>
+
+        <br>
+
+        <div class="forecast"> 
+          <ul>
+<li> tuesdau</li>
+<li> wednsday </li>
+
+          </ul>
+          </div>
+        </div>
     
-</body>
+        </div>
+    </main>
+
+    <footer></footer>
+    </body> 
+  </div>
+  <script src="script.js"></script>
+  </body>
+  
 </html>
