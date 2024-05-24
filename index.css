@@ -1,5 +1,5 @@
 .box-app {
-  background: linear-gradient(113.5deg, rgb(234, 234, 234) 22.3%, rgb(201, 234, 211) 56.6%, rgb(255, 180, 189) 90.9%);
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   width: 540px;
   height: 500px;
   margin: 60px auto;
@@ -10,7 +10,7 @@
 }
 
 body {
-  background: rgb(202, 203, 201);
+  background: rgba(147, 164, 178, 0.47);
   font-family:monospace
 }
 
