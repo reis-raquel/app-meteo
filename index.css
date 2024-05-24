@@ -42,7 +42,7 @@ body {
   margin: 0;
 }
 
-.current-temperature-value{ color: orangered;
+.current-temperature-value{ color: rgb(12, 11, 11);
   font-size: 48px;
 }
 
@@ -60,11 +60,13 @@ body {
   font-size: 100px;}
 
 
-.current-temperature-unit {
-  font-size: 28px;
+  
+.weather-app-unit{
+  font-size: 30px;
   position: relative;
-  top: -38px;
+  top: -15px;
 }
+
 
 footer {
   border-top: 1px solid #f9f7fe;
