@@ -59,9 +59,10 @@ font-size: 40px;
 
 
 
-.temperature-icon {
+.weather-icon {
+  margin-top: -70px;
   position:relative;
-  font-size: 100px;}
+  width: 180px;}
 
 
   
