@@ -25,21 +25,43 @@
     </header>
 
     <main>
-        <div class="weather-container">
+    <div class="weather-container">
 
-            <h1 class="city" id="city"> </h1>
+            <h1 class="city" id="city">   </h1>
             
-            <div  id="icon">
-              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" class="weather-icon"> </div> 
+            <div id="icon">
+              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" class="weather-icon"> 
+            </div>
+    
+
+            <span class="current-temperature-value" id="temperature"></span> 
+             <span class=" weather-app-unit">   °</span>
             
-            <span class="current-temperature-value" id="temperature"></span>  <span class=" weather-app-unit">   °</span>
-            </div> 
-            <p>
-            <div id="description">  </div>
+    </div>
+  
+          <p></p>
+              
+   <div  id="description">     
 
- <span > Humidity:  <strong id="humidity">   </strong>, </span> <span > Wind speed: <strong id="wind-speed"> </strong>   </span>
-
-            <div class="time" id="time">  </div>  
+   </div>
+<span>
+          Humidity:  <strong id="humidity"> </strong>   </span> , <span>  Wind speed: <strong id="wind-speed"> </strong>   </span>
+            
+      
+            <div class="time" id="time">  
+             </div>
+  
+    
+  
+      <div class="weather-forecast "id="forecast">
+        
+      
+      
+      
+      </div>
+        
+    
+</main>            
  <footer>
       
       This project was coded by <a href= "https://github.com/reis-raquel/"target="_blank"> Raquel Reis, </a>open-sourced on <a href="https://app.netlify.com/teams/reis-raquel/overview"target="_blank"> Github</a>
@@ -51,10 +73,7 @@
            
 </div>
  
-    </main>
 
-
-   
   </div>
 
     <script src="script.js"></script>
