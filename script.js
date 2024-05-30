@@ -18,6 +18,9 @@ function refreshWeather(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
+
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -43,44 +46,49 @@ function formatDate(date) {
 }
 
 function searchCity(city) {
-  let apiKey = `dt3bbe9160a34o69bead9ceff8624028`;
+  let apiKey = "dt3bbe9160a34o69bead9ceff8624028";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(refreshWeather);
 }
 
 function handleSearchSubmit(event) {
-  event.preventDefault();
+  event.preventDefault();   
   let searchInput = document.querySelector("#search-form-input");
 
   searchCity(searchInput.value);
 }
 
 
-function getForescast(city){
-  let apiKey = `dt3bbe9160a34o69bead9ceff8624028`;
+function getForecast (city){
+  let apiKey = "dt3bbe9160a34o69bead9ceff8624028";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-
-
+  axios(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response){
+ console.log(response.data);
+
+  let days = ["Sun","Mon","Tue", "Wed", "thu"];
+
 let forecastHtml = "";
 
 
 
-  response.data.daily.forEach(function (day) {
+  days.forEach(function (day) {
+
+
     forecastHtml =
       forecastHtml +
       `
 <div class="weather-forecast-day">
           <div class=" weather-forecast-date"> ${day}</div>
-          <div class="weather-forecast.icon">  ☀️  </div>
+          <div class="weather-forecast.icon"> ⛅
+          </div>
           <div class="weather-forecast-temperatures>
           <div class=" weather-forecast-temperature">
-            <strong>${Math.round(day.temperature.maximum)}°</strong>
+            <strong>15°</strong>
           </div>
-          <div class="weather-forecast-temperture">${Math.round(
-            day.temperature.minimum)}°</div>
+          <div class="weather-forecast-temperture">9°</div>
         </div>
       </div>
     `;
@@ -96,5 +104,4 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Helsinki");
-getForecast("Helsinki");
-displayForecast();
+
